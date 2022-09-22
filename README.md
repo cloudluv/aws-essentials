@@ -98,3 +98,14 @@ cd easy-rsa/easyrsa3
   ]
 }
 ```
+
+## EFS 연결
+
+**EC2 보안그룹 NFS 허용 & EFS Network NFS 허용**
+
+```bash
+sudo su -
+mkdir /efs
+cd /
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport <EFS DNS 이름>:/ efs
+```
