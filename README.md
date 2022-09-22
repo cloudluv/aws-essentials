@@ -29,6 +29,7 @@ export PATH=/opt/maven/bin:${PATH}
 ```bash
 git clone https://github.com/cloudluv/essentials.git
 git checkout v0.1
+cd ~/essentials
 mvn clean install
 java -jar target/essentials-0.0.1-SNAPSHOT.jar > /tmp/essentials.log 2>&1 &
 ```
